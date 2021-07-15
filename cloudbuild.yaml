@@ -1,0 +1,5 @@
+steps:
+- id: build & host docker image
+name: 'gcr.io/cloud-builders/gcloud'
+args: ['builds', 'submit' , '--config', '--substitutions=_APP_TYPE=$_APP_TYPE', './docker.yaml', '--timeout=10m']
+entrypoint: gcloud

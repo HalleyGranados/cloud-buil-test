@@ -1,0 +1,5 @@
+steps:
+- name: 'gcr.io/cloud-builders/docker'
+  args: [ 'build', '-t', 'us-central1-docker.pkg.dev/cb-triggers/quickstart-docker-repo/quickstart-image:tag${_APP_TYPE}', '.' ]
+images:
+- 'us-central1-docker.pkg.dev/cb-triggers/quickstart-docker-repo/quickstart-image:tag1'
